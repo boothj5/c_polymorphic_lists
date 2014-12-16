@@ -37,7 +37,7 @@ win_create_person(char *label, int num, char *firstname, char *secondname)
     new_win->fistname = strdup(firstname);
     new_win->secondname = strdup(secondname);
 
-    return (Win*)new_win;
+    return &new_win->super;
 }
 
 Win *
@@ -51,7 +51,7 @@ win_create_address(char *label, int num, char *address, char *town, char *countr
     new_win->town = strdup(town);
     new_win->country = strdup(country);
 
-    return (Win*)new_win;
+    return &new_win->super;
 }
 
 void
